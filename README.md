@@ -13,7 +13,7 @@ Dependencies
 - glsl.js
 - jquery
 
-TODO:
+TODO
 
 - Make a game Object class that is easily extendable in coffeescript with easier access to forces,rotation,position etc
 
