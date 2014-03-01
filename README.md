@@ -22,3 +22,5 @@ TODO
 - Better camera options
 
 - Fixed Size
+
+- Deleting Game Objects and garbage collection
