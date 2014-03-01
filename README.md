@@ -20,3 +20,5 @@ TODO
 - Simplify editing post processing varibles.
 
 - Better camera options
+
+- Fixed Size
