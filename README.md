@@ -15,12 +15,8 @@ Dependencies
 
 TODO
 
-- Make a game Object class that is easily extendable in coffeescript with easier access to forces,rotation,position etc
-
-- Simplify editing post processing varibles.
-
+- Make a game object class that is easily extendable in coffeescript with easier access to forces,rotation,position etc
+- Simplify editing post processing varibles
 - Better camera options
-
 - Fixed size
-
-- Deleting Game objects and garbage collection
+- Deleting game objects and garbage collection
