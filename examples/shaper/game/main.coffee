@@ -1,7 +1,7 @@
 Gratify.gravity=new b2Vec2(0,  0)
 maindude={} ; asteroids=[]
 mouseangle = mousex = mousey = 0
-imgObj = new Image(1922,1212)
+background = new Image(1922,1212)
 
 keypress = (which) ->   
 	maindude.ApplyForce( { x:Math.cos(mouseangle) * 142.5 , y:Math.sin(mouseangle) * 142.5 },
@@ -11,22 +11,20 @@ mousedown = ->
 	distf=vecfromangle(maindude.GetPosition().x,maindude.GetPosition().y,0.9,mouseangle);
 	bullet = box(world, distf.x,distf.y,0.3,0.3,{user_data:"bullet"})
 	bullet.SetBullet(true);
-	force = new b2Vec2(Math.cos(mouseangle) * 13.5 , Math.sin(mouseangle) * 13.5);
+	force=40;
+	force = new b2Vec2(Math.cos(mouseangle) * force , Math.sin(mouseangle) * force);
 	bullet.ApplyImpulse(force,bullet.GetWorldCenter());
 	bullet.drawbefore = =>
 		ctx.strokeStyle = "#0000F7";
 		
 drawbefore = ->
-	ctx.save()
-	ctx.scale(0.7,0.7);
-	ctx.drawImage(imgObj,-maindude.GetPosition().x,-maindude.GetPosition().y);
-	ctx.restore()
+	ctx.drawImage(background,-3,-120);
 	ctx.strokeStyle = "#006837"
 	ctx.lineWidth=5
 	ctx.fillStyle = "rgba(40, 40, 40, 0.5)"
 	
 init = -> 
-	imgObj.src = 'graphics/background.png'
+	background.src = 'graphics/background.png'
 	maindude=polygon(world,20,20,1,1,3)	
 	maindude.drawbefore = =>
 		ctx.strokeStyle = "#0000F7";
