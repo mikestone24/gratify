@@ -11,7 +11,7 @@ Dependencies
 
 - Box2DWeb
 - glsl.js
--jquery
+- jquery
 
 TODO:
 
